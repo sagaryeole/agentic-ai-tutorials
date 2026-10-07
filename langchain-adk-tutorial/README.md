@@ -7,6 +7,19 @@ This is the LangChain port of the Google ADK tutorial in `../google-adk-tutorial
 topics and the same cases, built with `langchain` (`create_agent`, middleware) and `langgraph` (graphs, state, checkpoints).
 **Agents 01 to 14 are ported so far.** Agents 15 to 50 and the study guide (`questions.md`) are still to come.
 
+## Documentation
+
+| | |
+|---|---|
+| [Getting started](docs/getting-started.md) | Install, set up Gemini or a local model, run your first agent |
+| [Architecture](docs/architecture.md) | The folder layout, how the chat runner finds an agent, the shared `common/` code |
+| [Configuration](docs/configuration.md) | Every environment variable, command-line option and `langgraph.json` |
+| [Shared code reference](docs/common-api.md) | `get_model`, the chat and eval runners, `ask`, `embed_texts` and the RAG helpers |
+| [Agent catalog](docs/agent-catalog.md) | Each folder's files, start command and how its agent is built |
+| [Evals and tests](docs/evals-and-testing.md) | `uv run evals`, the eval set format and the unit tests |
+| [Troubleshooting](docs/troubleshooting.md) | Fixes for common setup errors |
+| [Contributing](CONTRIBUTING.md) | How to port the next agent or fix a lesson |
+
 ## Learning tracks
 
 New to LangChain? Go in order. Looking for one topic? Pick a track. Each link opens that agent's `CASES.md`.
@@ -129,3 +142,11 @@ Run the model-free unit tests:
 2. Run each case yourself, compare with the "Expect" line, then read "Learn".
 3. Results that involve a language model can differ between runs and between Gemini and the local model.
    The "Expect" lines say what happened when the case was tested.
+
+## Contributing
+
+Fixes and newly ported agents are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+[Apache License 2.0](LICENSE).

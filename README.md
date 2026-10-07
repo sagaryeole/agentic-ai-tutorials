@@ -7,7 +7,7 @@ with a diagram of how it executes plus small cases to try, easiest first.
 | Folder | Framework | Status |
 |---|---|---|
 | [`google-adk-tutorial`](google-adk-tutorial/README.md) | [Google ADK](https://google.github.io/adk-docs/) | Complete: 50 agents, a capstone, a study guide with 100 questions, and [reference documentation](google-adk-tutorial/docs/README.md) |
-| [`langchain-adk-tutorial`](langchain-adk-tutorial/README.md) | [LangChain](https://docs.langchain.com/) and LangGraph | In progress: agents 01 to 14 are ported |
+| [`langchain-adk-tutorial`](langchain-adk-tutorial/README.md) | [LangChain](https://docs.langchain.com/) and LangGraph | In progress: agents 01 to 14 are ported, with [reference documentation](langchain-adk-tutorial/docs/README.md) |
 
 The LangChain tutorial is a port of the Google ADK one: the same agents, the same topics and the same
 cases. Its README has a table that maps each ADK concept to its LangChain equivalent, so you can read the
@@ -43,9 +43,10 @@ Then follow the Setup section of that folder's README.
 
 ## Contributing
 
-Fixes and new lessons are welcome. See
-[google-adk-tutorial/CONTRIBUTING.md](google-adk-tutorial/CONTRIBUTING.md); the same conventions apply to
-both tutorials.
+Fixes and new lessons are welcome. Each tutorial has its own guide:
+[google-adk-tutorial/CONTRIBUTING.md](google-adk-tutorial/CONTRIBUTING.md) and
+[langchain-adk-tutorial/CONTRIBUTING.md](langchain-adk-tutorial/CONTRIBUTING.md), which explains how to port the
+next agent.
 
 ## License
 
