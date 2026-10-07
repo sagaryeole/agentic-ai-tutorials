@@ -10,6 +10,19 @@ and 100 questions (with hidden answers) to check your understanding.
 
 *`uv run adk web` on agent07: the hand-off, the tool call, and the timing of each step (a local model through LM Studio).*
 
+## Documentation
+
+| | |
+|---|---|
+| [Getting started](docs/getting-started.md) | Install, set up Gemini or a local model, run your first agent |
+| [Architecture](docs/architecture.md) | The folder layout, how ADK finds an agent, the shared `common/` code |
+| [Configuration](docs/configuration.md) | Every environment variable, per-agent switch and port |
+| [Shared code reference](docs/common-api.md) | `get_model`, `ask`, `embed_texts` and the RAG helpers |
+| [Agent catalog](docs/agent-catalog.md) | Each folder's files and start command |
+| [Evals and tests](docs/evals-and-testing.md) | `adk eval`, the unit tests and the measuring scripts |
+| [Troubleshooting](docs/troubleshooting.md) | Fixes for common setup errors |
+| [Contributing](CONTRIBUTING.md) | How to add an agent or fix a lesson |
+
 ## Learning tracks
 
 New to ADK? Go in order. Looking for one topic? Pick a track. Each link opens that agent's `CASES.md`.
@@ -127,8 +140,9 @@ Notes on this table:
    [LM Studio](https://lmstudio.ai/), load a model, and start the server in the Developer tab.
    Set `LOCAL_MODEL_ID` in `.env` to the id shown by `curl http://127.0.0.1:1234/v1/models`.
 6. For the RAG labs, agent 20, agents 35-38, 49 and 50, embeddings come from `EMBEDDING_PROVIDER`: `gemini` (default, uses the Google setup above) or
-   `local` (an embedding model loaded in LM Studio, `text-embedding-embeddinggemma-300m` by default). These variables are optional
-   and not in `.env.example`: `EMBEDDING_PROVIDER`, `GEMINI_EMBEDDING_MODEL`, `LOCAL_EMBEDDING_MODEL`.
+   `local` (an embedding model loaded in LM Studio, `text-embedding-embeddinggemma-300m` by default). The variables are
+   `EMBEDDING_PROVIDER`, `GEMINI_EMBEDDING_MODEL` and `LOCAL_EMBEDDING_MODEL`. Note that `.env.example` sets
+   `EMBEDDING_PROVIDER=local`; see [Configuration](docs/configuration.md#embeddings).
 
 If you see `No API key was provided`, the Gemini settings in `.env` are missing.
 Gemini can answer `429 RESOURCE_EXHAUSTED` when many calls arrive quickly. Agents 07+ retry automatically (see `common/models.py`);
@@ -162,3 +176,11 @@ Run the evals (agents 13, 20, 25 and 50):
 3. Results that involve a language model can differ between runs and between Gemini and the local model.
    The "Expect" lines say what happened when the case was tested.
 4. After each group of agents, read the matching module of the study guide [questions.md](questions.md) and answer its questions.
+
+## Contributing
+
+Fixes and new lessons are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+[Apache License 2.0](LICENSE).
