@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# Installs the shared `common` package into the venv (editable), so every entry point
+# (the chat runner, the eval runner, `langgraph dev`) can import `common.models` without PYTHONPATH.
+[tool.hatch.build.targets.wheel]
+packages = ["common"]
+
+[project]
+name = "agentic-demo-langchain"
+version = "0.1.0"
+description = "Step-by-step LangChain / LangGraph tutorial: one new agent concept per folder."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "a2a-sdk[http-server]>=0.3.4,<2",
+    "fastapi>=0.115",
+    "httpx>=0.28.1",
+    "langchain>=1.0",
+    "langchain-google-genai>=3.0",
+    "langchain-mcp-adapters>=0.1.11",
+    "langchain-openai>=1.0",
+    "langgraph>=1.0",
+    "langgraph-checkpoint-sqlite>=3.0",
+    "langgraph-cli[inmem]>=0.4",
+    "mcp>=1.20",
+    "numpy>=2.3",
+    "opentelemetry-sdk>=1.30",
+    "pandas>=2.3.3",
+    "pillow>=11",
+    "python-dotenv>=1.2",
+    "rouge-score>=0.1.2",
+    "uvicorn>=0.34",
+]
+
+[project.scripts]
+chat = "common.chat:main"
+evals = "common.evals:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

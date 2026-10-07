@@ -1,0 +1,22 @@
+{
+  "dependencies": [
+    "."
+  ],
+  "graphs": {
+    "agent01_poet": "./agent01_poet/agent.py:agent",
+    "agent02_toolcall": "./agent02_toolcall/agent.py:agent",
+    "agent03_localmodel": "./agent03_localmodel/agent.py:agent",
+    "agent04_localmodelwithtool": "./agent04_localmodelwithtool/agent.py:agent",
+    "agent05_state": "./agent05_state/agent.py:agent",
+    "agent06_structured": "./agent06_structured/agent.py:agent",
+    "agent07_multiagent": "./agent07_multiagent/agent.py:agent",
+    "agent08_workflow": "./agent08_workflow/agent.py:agent",
+    "agent09_parallel": "./agent09_parallel/agent.py:agent",
+    "agent10_loop": "./agent10_loop/agent.py:agent",
+    "agent11_guardrails": "./agent11_guardrails/agent.py:agent",
+    "agent12_mcp": "./agent12_mcp/agent.py:make_agent",
+    "agent13_evals": "./agent13_evals/agent.py:agent",
+    "agent14_agent_as_tool": "./agent14_agent_as_tool/agent.py:agent"
+  },
+  "env": ".env"
+}

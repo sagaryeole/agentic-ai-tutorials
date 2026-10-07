@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.pytest_cache/
+
+# Virtual environments
+.venv
+
+# Local config and secrets
+.env
+
+# LangGraph dev server data (threads and state of `langgraph dev`)
+.langgraph_api/
+
+# any local database (for example a SQLite checkpointer)
+*.db

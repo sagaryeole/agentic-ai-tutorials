@@ -6,7 +6,7 @@ explanations and new agents are all welcome.
 ## Set up
 
     git clone https://github.com/sagaryeole/AgenticDemo.git
-    cd AgenticDemo
+    cd AgenticDemo/google-adk-tutorial
     uv sync
     cp .env.example .env
     uv run pytest

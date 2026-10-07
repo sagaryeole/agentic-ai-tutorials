@@ -6,6 +6,10 @@ directly.
 
 ## Layout
 
+This tutorial is the `google-adk-tutorial` folder of the repository. "Project root" in these pages means that
+folder: it is where you run `uv` and where `.env` lives. The LangChain port is the sibling folder
+[`langchain-adk-tutorial`](../../langchain-adk-tutorial/README.md).
+
     agent01_poet/ ... agent50_capstone/   one lesson per folder
     common/                               shared helpers (model switch, direct model calls, embeddings, RAG)
     data/handbook.md                      the sample document every RAG step searches

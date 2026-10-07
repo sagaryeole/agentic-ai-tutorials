@@ -1,0 +1,9 @@
+# Keep secrets and bulky local files out of any image built from this folder.
+.env
+.env.*
+!.env.example
+.venv
+.git
+.langgraph_api
+*.db
+__pycache__

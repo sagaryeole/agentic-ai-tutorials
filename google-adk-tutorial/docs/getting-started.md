@@ -17,7 +17,7 @@ The project uses [uv](https://docs.astral.sh/uv/), which installs the right Pyth
 `.python-version`) and every package.
 
     git clone https://github.com/sagaryeole/AgenticDemo.git
-    cd AgenticDemo
+    cd AgenticDemo/google-adk-tutorial
     uv sync
 
 `uv sync` also installs the shared `common` package into the virtual environment, so `from common.models
@@ -27,7 +27,7 @@ import get_model` works from any entry point without setting `PYTHONPATH`.
 
     cp .env.example .env
 
-One `.env` in the project root is enough. ADK looks for `.env` in the agent's folder and then in each parent
+One `.env` in the project root (the `google-adk-tutorial` folder) is enough. ADK looks for `.env` in the agent's folder and then in each parent
 folder, and `common/` loads the root file itself. `.env` is git-ignored; never commit it.
 
 Every variable is described in [Configuration](configuration.md).

@@ -1,0 +1,66 @@
+{
+  "name": "Bookshop basics",
+  "description": "Five small checks: which tool is called with which arguments, and what the answer says.",
+  "cases": [
+    {
+      "id": "author_search",
+      "turns": [
+        {
+          "user": "Which books by Tolkien do you have?",
+          "expected_tools": [{"name": "find_books_by_author", "args": {"author": "Tolkien"}}],
+          "reference": "We have The Hobbit, which is available, and The Fellowship of the Ring, which is not available, both by J.R.R. Tolkien."
+        }
+      ]
+    },
+    {
+      "id": "book_details",
+      "turns": [
+        {
+          "user": "Tell me about book B003.",
+          "expected_tools": [{"name": "get_book", "args": {"book_id": "B003"}}],
+          "reference": "Book B003 is Dune by Frank Herbert, published in 1965. It is available."
+        }
+      ]
+    },
+    {
+      "id": "unavailable_book",
+      "turns": [
+        {
+          "user": "Is book B005 available?",
+          "expected_tools": [{"name": "get_book", "args": {"book_id": "B005"}}],
+          "reference": "No, book B005, Foundation by Isaac Asimov, is not available."
+        }
+      ]
+    },
+    {
+      "id": "not_in_catalogue",
+      "turns": [
+        {
+          "user": "Do you have anything by Stephen King?",
+          "expected_tools": [{"name": "find_books_by_author", "args": {"author": "Stephen King"}}],
+          "reference": "No, there are no books by Stephen King in the catalogue."
+        }
+      ]
+    },
+    {
+      "id": "list_with_availability",
+      "turns": [
+        {
+          "user": "List all the books you have, and which are available.",
+          "expected_tools": [{"name": "list_books", "args": {}}],
+          "reference": "The Hobbit is available. The Fellowship of the Ring is not available. Dune is available. Neuromancer is available. Foundation is not available."
+        }
+      ]
+    },
+    {
+      "id": "no_tool_needed",
+      "turns": [
+        {
+          "user": "What is a library?",
+          "expected_tools": [],
+          "reference": "A library is a place that keeps books and other materials that people can read or borrow."
+        }
+      ]
+    }
+  ]
+}

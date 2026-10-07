@@ -1,0 +1,6 @@
+{
+  "criteria": {
+    "tool_trajectory": 1.0,
+    "response_judge": 0.8
+  }
+}
